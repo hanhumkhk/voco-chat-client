@@ -19,7 +19,6 @@ body, page-container, .container {
   width: 600px;
   background: #afabab;
   border-radius: 5px;
-  height: 600px;
 }
 
 h1 {
@@ -33,7 +32,6 @@ h1 {
   background: #383a3d;
   border-radius: 5px;
   padding: 10px;
-  height: 520px;
 }
 
 .text-box {
@@ -91,4 +89,8 @@ p {
   border-color: #383a3d;
   margin-top: 10px;
   align-items: center;
+}
+
+#inputForm {
+  display: flex;
 }

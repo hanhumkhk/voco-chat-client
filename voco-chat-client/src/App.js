@@ -1,10 +1,10 @@
-import React from 'react';
-import '../src/css/App.css';
-//import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-//import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useState } from 'react';
+import axios from 'axios';
+import { Form } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import DUMMY_DATA from './data';
+import '../src/css/App.css';
 
 function MessageRow(message, index) {
   return (
@@ -16,20 +16,40 @@ function MessageRow(message, index) {
 }
 
 function Chat() {
-  
+
+  const [user, setUser] = useState('');
+  const [content, setContent] = useState('');
+  const [posts, setPosts] = useState(DUMMY_DATA);
+
+  async function handleSubmit(e) {
+    /*const response = await axios.get('https://jsonplaceholder.typicode.com/todos/1');
+    console.log(response.data);   -- läheb API päringu saatmiseks*/
+
+    setPosts([...posts, {
+      senderId: user,
+      text: content
+    }]);
+  }
+
   return (
     <Container className="page-container">
       <h1>VOCO</h1>
       <div className="chat-container">
         <div className="messages-box">
-          {DUMMY_DATA.map((message, index) => MessageRow(message, index))}
+          {posts.map((message, index) => MessageRow(message, index))}
         </div>
 
-        <div className="user-box">
-          <div className="user"><b>Guest</b></div>
-          <div className="user-message">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</div>
-        </div>
-        <Button >Send</Button>
+        <Form>
+          <div id='inputForm'>
+            <Form.Group className='mb-3' id='konn'>
+              <Form.Control value={user} onChange={e => setUser(e.target.value)}></Form.Control>
+            </Form.Group>
+            <Form.Group className='mb-3'>
+              <Form.Control value={content} onChange={e => setContent(e.target.value)} ></Form.Control>
+            </Form.Group>
+          </div>
+          <Button onClick={e => handleSubmit(e)}>Send</Button>
+        </Form>
       </div>
 
     </Container>
