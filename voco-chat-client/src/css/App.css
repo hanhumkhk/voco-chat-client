@@ -93,4 +93,14 @@ p {
 
 #inputForm {
   display: flex;
+
+  border-radius: 3em;
+}
+
+#formUser {
+  
+}
+
+#formContent {
+
 }

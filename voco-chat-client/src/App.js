@@ -41,10 +41,10 @@ function Chat() {
 
         <Form>
           <div id='inputForm'>
-            <Form.Group className='mb-3' id='konn'>
+            <Form.Group className='mb-3' id='formUser'>
               <Form.Control value={user} onChange={e => setUser(e.target.value)}></Form.Control>
             </Form.Group>
-            <Form.Group className='mb-3'>
+            <Form.Group className='mb-3' id='formContent'>
               <Form.Control value={content} onChange={e => setContent(e.target.value)} ></Form.Control>
             </Form.Group>
           </div>
