@@ -23,8 +23,8 @@ body, page-container, .container {
 
 h1 {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 0.5em;
+  left: 1em;
   color: white;
 }
 
@@ -62,26 +62,13 @@ p {
   height: 80px;
 }
 
-.user{
-  float: left;
-  height: 100%;
-  width: 15%;
-  text-align:center;
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5px;
+.userBX{
+  color: rgb(255, 255, 255);
   border-right: 2px solid black;
 }
 
-.user-message {
-  font-size: 0.8em;
-  height: 100%;
-  text-align: right;
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5px;
+.contentBX {
+  color: rgb(255, 255, 255);
 }
 
 .btn-block {
@@ -89,18 +76,10 @@ p {
   border-color: #383a3d;
   margin-top: 10px;
   align-items: center;
+  height: 3em;
+  width:5em;
 }
 
 #inputForm {
   display: flex;
-
-  border-radius: 3em;
-}
-
-#formUser {
-  
-}
-
-#formContent {
-
 }

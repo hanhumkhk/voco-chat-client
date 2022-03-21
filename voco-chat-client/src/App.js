@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import axios from 'axios'; //API jaoks
 import { Form } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
@@ -41,14 +41,16 @@ function Chat() {
 
         <Form>
           <div id='inputForm'>
-            <Form.Group className='mb-3' id='formUser'>
+            
+            <Form.Group className='userBX'>
               <Form.Control value={user} onChange={e => setUser(e.target.value)}></Form.Control>
             </Form.Group>
-            <Form.Group className='mb-3' id='formContent'>
+
+            <Form.Group className='contentBX'>
               <Form.Control value={content} onChange={e => setContent(e.target.value)} ></Form.Control>
             </Form.Group>
           </div>
-          <Button onClick={e => handleSubmit(e)}>Send</Button>
+          <Button className='btn-block' onClick={e => handleSubmit(e)}>Send</Button>
         </Form>
       </div>
 
