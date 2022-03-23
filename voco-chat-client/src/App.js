@@ -47,7 +47,7 @@ function Chat() {
             </Form.Group>
 
             <Form.Group className='contentBX'>
-              <Form.Control value={content} onChange={e => setContent(e.target.value)} ></Form.Control>
+              <Form.Control value={content} onChange={e => setContent(e.target.value)}></Form.Control>
             </Form.Group>
           </div>
           <Button className='btn-block' onClick={e => handleSubmit(e)}>Send</Button>
