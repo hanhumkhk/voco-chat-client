@@ -29,6 +29,13 @@ function Chat() {
       senderId: user,
       text: content
     }]);
+
+    setUser((prevState) => [...prevState, user])
+    setUser('');
+
+    setContent((prevState) => [...prevState, content])
+    setContent('');
+
   }
 
   return (
