@@ -37,7 +37,6 @@ h1 {
   height: 25em;
   border-radius: 0.5em;
   padding: 10px;
-
   overflow: scroll;
   overflow-x: hidden;
 }
@@ -97,6 +96,7 @@ p {
   border-color: #383a3d;
   border-radius: 0.5em;
   margin-top: 10px;
+  border-radius: 0.5em;
   align-items: center;
   height: 3em;
   width:5em;
